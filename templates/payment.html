@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Payment</h2><p>Pay Exact Amount: <b>₹{{ total }}</b></p><ul>{% for product,qty,line_total in items %}<li>{{ product.name }} x{{ qty }} = ₹{{ line_total }}</li>{% endfor %}</ul><form method='post'><button>Confirm Payment</button></form>{% endblock %}
