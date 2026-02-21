@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Shop Products</h2><table><tr><th>Name</th><th>Price</th><th>Stock</th><th></th></tr>{% for p in products %}<tr><td>{{ p.name }}</td><td>₹{{ p.price }}</td><td>{{ p.stock }}</td><td><a href='{{ url_for("add_to_cart", product_id=p.id) }}'>Add</a></td></tr>{% endfor %}</table>{% endblock %}

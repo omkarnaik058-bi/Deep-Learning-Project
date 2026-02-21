@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>Smart Dairy Farming + E-Commerce</h1><div class='card-grid'><div class='card'>Products: {{ stats.products }}</div><div class='card'>Orders: {{ stats.orders }}</div><div class='card'>Revenue: ₹{{ '%.2f'|format(stats.revenue) }}</div><div class='card'>Animals: {{ stats.animals }}</div></div>{% endblock %}

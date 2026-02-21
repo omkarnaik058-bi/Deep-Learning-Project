@@ -1,0 +1,10 @@
+body{font-family:Arial,sans-serif;background:#f5f7fb;margin:0}
+nav{background:#1f4e79;color:#fff;padding:12px}nav a{color:#fff;margin-right:10px;text-decoration:none}
+.container{max-width:1100px;margin:20px auto;background:#fff;padding:20px;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin-top:12px}th,td{border:1px solid #ddd;padding:8px}
+.badge{padding:2px 8px;border-radius:12px;color:#fff}
+.green{background:green}.red{background:#c1121f}.orange{background:#ff8c00}
+.flash{padding:8px;margin:8px 0;border-radius:4px}.success{background:#d9fdd3}.error{background:#ffd6d6}
+.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{padding:12px;background:#eef3fb;border-radius:8px}
+input,select,button,textarea{padding:8px;margin:4px 0;width:100%}
+button{background:#1f4e79;color:#fff;border:none;border-radius:4px;cursor:pointer}

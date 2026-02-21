@@ -1,0 +1,17 @@
+<!doctype html><html><head><title>Smart Dairy</title><link rel='stylesheet' href='{{ url_for("static", filename="style.css") }}'></head><body>
+<nav>
+<a href='{{ url_for("dashboard") }}'>Dashboard</a>
+{% if session.get('username') and session.get('role')=='customer' %}
+<a href='{{ url_for("products") }}'>Shop</a><a href='{{ url_for("cart") }}'>Cart</a><a href='{{ url_for("order_status") }}'>My Orders</a>
+{% endif %}
+{% if session.get('username') and session.get('role')=='admin' %}
+<a href='{{ url_for("admin_products") }}'>Admin Products</a><a href='{{ url_for("admin_orders") }}'>Admin Orders</a><a href='{{ url_for("reports") }}'>Reports</a><a href='{{ url_for("animals") }}'>Animals</a><a href='{{ url_for("pregnancies") }}'>Pregnancies</a><a href='{{ url_for("deliveries") }}'>Deliveries</a>
+{% endif %}
+<span style='float:right'>
+{% if session.get('username') %}{{ session.get('username') }} ({{ session.get('role') }}) <a href='{{ url_for("logout") }}'>Logout</a>{% else %}<a href='{{ url_for("login") }}'>Login</a> <a href='{{ url_for("register") }}'>Register</a>{% endif %}
+</span></nav>
+<div class='container'>
+{% for category,msg in get_flashed_messages(with_categories=true) %}<div class='flash {{ category }}'>{{ msg }}</div>{% endfor %}
+{% block content %}{% endblock %}
+</div>
+</body></html>
